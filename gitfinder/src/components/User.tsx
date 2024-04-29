@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import classes from './User.module.css';
 
 const User = ({ login, avatar_url, followers, following, location }: UserProps) => {
-    const [bestProjects, setBestProjects] = useState<any[]>([]); // Array para armazenar os melhores projetos
-    const [loading, setLoading] = useState<boolean>(false); // Estado para controlar o carregamento dos projetos
+    const [bestProjects, setBestProjects] = useState<any[]>([]); 
+    const [loading, setLoading] = useState<boolean>(false); 
 
     const fetchBestProjects = async () => {
         setLoading(true);
@@ -14,9 +14,9 @@ const User = ({ login, avatar_url, followers, following, location }: UserProps) 
         try {
             const response = await fetch(`https://api.github.com/users/${login}/repos`);
             const data = await response.json();
-            // Implemente a lógica para classificar os projetos aqui (por exemplo, por número de estrelas)
-            const sortedProjects = data.sort((a: any, b: any) => b.stargazers_count - a.stargazers_count).slice(0, 5); // Obtém os 5 melhores projetos
-            setBestProjects(sortedProjects);
+            
+            const sortedProjects = data.sort((a: any, b: any) => b.stargazers_count - a.stargazers_count).slice(0, 5);
+                        setBestProjects(sortedProjects);
         } catch (error) {
             console.error('Erro ao obter os melhores projetos:', error);
         } finally {
