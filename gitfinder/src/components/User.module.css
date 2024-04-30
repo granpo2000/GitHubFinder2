@@ -1,5 +1,5 @@
 .user {
-    background-color: #2b3566;
+    background-color: #000000;
     padding: 2rem;
     border-radius: 1rem;
     display: flex;
@@ -11,7 +11,7 @@
 .user img{
     width: 140px;
     height: 140px;
-    border: 4px solid #644aff;
+    border: 4px solid #cead0b;
     border-radius: 50%;
 }
 
@@ -21,7 +21,7 @@
     gap: 0.4rem;
 }
 .location svg{
-    fill: #4ed8c7;
+    fill: #cead0b;
     font-size: 1.5rem;
 
 }
@@ -40,24 +40,77 @@
     flex-direction: column;
     gap: 0.4rem;
 }
-.stats div:first-child{
-    border-right: 1px solid #9da5d1;
-}
+
 .stats .number{
-    background-color: #4ed8c7;
+    background-color: #29043c;
     padding: 0.2rem 0.4rem;
     border-radius: 3px;
 }
 
 .user a {
     text-align: center;
-    background-color: #644aff;
-    padding: 1rem;
-    border-radius: 5px;
+    display: flex;
+    background-color: #29043c;
+    padding: .5rem;
+    border-radius: 10px;
     opacity: 0.8;
     transition: .3s;
+
 
 }
 .user a:hover{
     opacity: 1;
+    background-color: #cead0b;
+    color: #000000;
 }
+.user button {
+    background-color: #29043c;
+    color: #ffffff;
+    border: 1px solid #29043c;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+  
+.user button:hover {
+    background-color: #cead0b;
+    color: #000000;
+}
+  
+.user .loading {
+    font-style: inter;
+    color: #bf1e1e;
+    margin-top: 10px;
+}
+  
+.user .best-projects {
+    margin-top:10px;
+}
+  
+.user .best-projects h3 {
+    margin-bottom: 10px;
+}
+  
+.user .best-projects ul {
+    list-style: none;
+    padding: 0.2rem;
+}
+  
+.user .best-projects ul li {
+    margin-bottom: 10px;
+}
+  
+.user .best-projects ul li a {
+    color: #cead0b;
+    text-decoration: none;
+}
+  
+.user .best-projects ul li a:hover {
+    text-decoration: underline;
+}
+@keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
